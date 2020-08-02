@@ -27,7 +27,7 @@ Notes API:
 
 ![Notes API page](./public/assets/images/noteapiscreenshot.png)
 
-[Deployed Application](https://)
+[Deployed Application](https://belleza-note-taker.herokuapp.com/)
 
 ## Builtwith
 * HTML
