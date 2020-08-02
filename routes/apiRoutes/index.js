@@ -1,17 +1,18 @@
 const router = require('express').Router();
 
-const {createNote} = require('../../lib/note');
-const notes = require('../../db/db');
+const saveNote = require('../../lib/notes');
+let notes = require('../../db/db.json');
 
+// API routes
+router.get('/notes', (req, res) => {
+	res.json(notes);
+});
 
-router.get('/api/notes', (req, res) => {
-    res.json(notes);
-})
-
-router.post('/api/notes', (req,res) => {
-    // create new note
-    const note = createNote(req.body, notes);
-    res.json(note);
-})
+router.post('/notes', (req, res) => {
+	// save note to db
+	const newNote = req.body;
+	saveNote(newNote);
+	res.json(notes);
+});
 
 module.exports = router;
