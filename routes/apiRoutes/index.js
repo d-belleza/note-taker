@@ -4,13 +4,14 @@ const {createNote} = require('../../lib/note');
 const notes = require('../../db/db');
 
 
-router.get('/notes', (req, res) => {
+router.get('/api/notes', (req, res) => {
     res.json(notes);
 })
 
-router.post('/notes', (req,res) => {
+router.post('/api/notes', (req,res) => {
     // create new note
-    createNote(req.body);
+    const note = createNote(req.body, notes);
+    res.json(note);
 })
 
 module.exports = router;
