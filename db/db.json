@@ -1,12 +1,12 @@
 [
   {
-    "title": "Test Title",
-    "text": "Test text",
-    "id": "test_id"
+    "title": "New note",
+    "text": "Check note id",
+    "id": "5x75p5xkddob6v4"
   },
   {
-    "title": "Brand new note",
-    "text": "Check new unique id",
-    "id": "5x75p3akddo1l7e"
+    "title": "Another new note",
+    "text": "Check difference in id",
+    "id": "5x75p5xkddobn9z"
   }
 ]

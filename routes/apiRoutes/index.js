@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const saveNote = require('../../lib/notes');
+const {saveNote,deleteNote} = require('../../lib/notes');
 let notes = require('../../db/db.json');
 
 // API routes
@@ -14,5 +14,11 @@ router.post('/notes', (req, res) => {
 	saveNote(newNote);
 	res.json(notes);
 });
+
+router.delete('/notes/:id', (req,res) => {
+    // delete note from db
+    notes = deleteNote(req.params.id);
+    res.json(notes);
+})
 
 module.exports = router;
